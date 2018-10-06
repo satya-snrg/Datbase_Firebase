@@ -1,0 +1,28 @@
+<html>
+<head>
+        <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+        <script src="config.js"></script>
+</head>
+<body>
+        <script>
+                 // Initialize Firebase
+                //Config loaded from config.js file
+                // var config = {
+                //   apiKey: "",
+                //   authDomain: "fir-test-db.firebaseapp.com",
+                //   databaseURL: "https://fir-test-db.firebaseio.com",
+                //   projectId: "fir-test-db",
+                //   storageBucket: "fir-test-db.appspot.com",
+                //   messagingSenderId: "283030028322"
+                // };
+                firebase.initializeApp(config);
+                var studentsRef = firebase.database().ref("students");
+
+                studentsRef.orderByChild("name").on("child_added", function(data) {
+                console.log(data.val().name);
+                });
+
+
+              </script>
+</body>
+</html>

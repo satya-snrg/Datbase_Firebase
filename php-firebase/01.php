@@ -14,7 +14,7 @@ $firebase = (new Factory)
 
 $db = $firebase->getDatabase();
 
-//Insert
+//1 Insert
 // $db->getReference('students')
 //    ->set([
 //        'name' => 'satya',
@@ -26,3 +26,5 @@ $db = $firebase->getDatabase();
 $reference = $db->getReference('students');
 $value = $reference->getSnapshot()->getValue();
 var_dump($value);
+//array(3) { ["address"]=> string(9) "Hyderabad" ["email"]=> string(14) "satya@test.com" ["name"]=> string(5) "satya" }
+

@@ -1,0 +1,47 @@
+<html>
+<head>
+        <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+</head>
+<body>
+        <script>
+                // Initialize Firebase
+                 // Initialize Firebase
+                //Config loaded from config.js file
+                // var config = {
+                //   apiKey: "",
+                //   authDomain: "fir-test-db.firebaseapp.com",
+                //   databaseURL: "https://fir-test-db.firebaseio.com",
+                //   projectId: "fir-test-db",
+                //   storageBucket: "fir-test-db.appspot.com",
+                //   messagingSenderId: "283030028322"
+                // };
+                firebase.initializeApp(config);
+                var studentsRef = firebase.database().ref("students");
+
+                studentsRef.push ({
+                    name: "satya",
+                    number: 1,
+                    age: 15
+                });
+
+                studentsRef.push ({
+                    name: 'ajay',
+                    number: 2,
+                    age: 14
+                });
+
+                studentsRef.push ({
+                    name: 'gopal',
+                    number: 3,
+                    age: 13
+                });
+
+                studentsRef.push ({
+                    name: 'balu',
+                    number: 4,
+                    age: 16
+                });
+
+              </script>
+</body>
+</html>
